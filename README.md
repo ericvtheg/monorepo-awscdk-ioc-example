@@ -1,6 +1,5 @@
 # node-typescript-boilerplate
 
-[![Sponsor][sponsor-badge]][sponsor]
 [![TypeScript version][ts-badge]][typescript-4-4]
 [![Node.js version][nodejs-badge]][nodejs]
 [![APLv2][license-badge]][license]
@@ -62,10 +61,6 @@ unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
 
 ## Additional Informations
 
-<!-- ## Backers & Sponsors
-
-Support this project by becoming a [sponsor][sponsor]. -->
-
 ## License
 
 Licensed under the APLv2. See the [LICENSE](https://github.com/jsynowiec/node-typescript-boilerplate/blob/main/LICENSE) file for details.
@@ -79,8 +74,6 @@ Licensed under the APLv2. See the [LICENSE](https://github.com/jsynowiec/node-ty
 [typescript-4-4]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-4.html
 [license-badge]: https://img.shields.io/badge/license-APLv2-blue.svg
 [license]: https://github.com/jsynowiec/node-typescript-boilerplate/blob/main/LICENSE
-<!-- [sponsor-badge]: https://img.shields.io/badge/♥-Sponsor-fc0fb5.svg
-[sponsor]: https://github.com/sponsors/jsynowiec -->
 [jest]: https://facebook.github.io/jest/
 [eslint]: https://github.com/eslint/eslint
 [wiki-js-tests]: https://github.com/jsynowiec/node-typescript-boilerplate/wiki/Unit-tests-in-plain-JavaScript
