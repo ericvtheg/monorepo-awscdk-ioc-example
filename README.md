@@ -17,7 +17,6 @@
 - NPM [scripts](#available-scripts) for common operations
 - Simple example of TypeScript code and unit test
 - .editorconfig for consistent file format
-- Reproducible environments thanks to [Volta][volta]
 - Example configuration for [GitHub Actions][gh-actions]
 
 🤲 Free as in speech: available under the APLv2 license.
@@ -28,7 +27,7 @@ This project is intended to be used with the latest Active LTS release of [Node.
 
 ### Use as a repository template
 
-To start, just click the **[Use template][repo-template-action]** link (or the green button). Start adding your code in the `src` and unit tests in the `__tests__` directories.
+To start, just click the **[Use template][repo-template-action]** link (or the green button). Start adding your code in the `src` and unit tests in the `tests` directories.
 
 ### Clone repository
 
@@ -78,8 +77,5 @@ Licensed under the APLv2. See the [LICENSE](https://github.com/jsynowiec/node-ty
 [eslint]: https://github.com/eslint/eslint
 [wiki-js-tests]: https://github.com/jsynowiec/node-typescript-boilerplate/wiki/Unit-tests-in-plain-JavaScript
 [prettier]: https://prettier.io
-[volta]: https://volta.sh
-[volta-getting-started]: https://docs.volta.sh/guide/getting-started
-[volta-tomdale]: https://twitter.com/tomdale/status/1162017336699838467?s=20
 [gh-actions]: https://github.com/features/actions
 [repo-template-action]: https://github.com/jsynowiec/node-typescript-boilerplate/generate

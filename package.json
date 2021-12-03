@@ -35,8 +35,5 @@
   "license": "Apache-2.0",
   "dependencies": {
     "tslib": "~2.3.1"
-  },
-  "volta": {
-    "node": "16.13.0"
   }
 }
