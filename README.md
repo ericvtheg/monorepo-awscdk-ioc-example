@@ -5,6 +5,8 @@
 [![APLv2][license-badge]][license]
 [![Build Status - GitHub Actions][gha-badge]][gha-ci]
 
+This repo implements a mono-repo approach described [here](https://www.serverless.com/blog/structuring-a-real-world-serverless-app).
+
 👩🏻‍💻 Developer Ready: A comprehensive template. Works out of the box for most [Node.js][nodejs] projects.
 
 🏃🏽 Instant Value: All basic tools included and configured:
@@ -29,25 +31,6 @@ This project is intended to be used with the latest Active LTS release of [Node.
 
 To start, just click the **[Use template][repo-template-action]** link (or the green button). Start adding your code in the `src` and unit tests in the `tests` directories.
 
-### Clone repository
-
-To clone the repository, use the following commands:
-
-```sh
-git clone https://github.com/jsynowiec/node-typescript-boilerplate
-cd node-typescript-boilerplate
-npm install
-```
-
-### Download latest release
-
-Download and unzip the current **main** branch or one of the tags:
-
-```sh
-wget https://github.com/jsynowiec/node-typescript-boilerplate/archive/main.zip -O node-typescript-boilerplate.zip
-unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
-```
-
 ## Available Scripts
 
 - `clean` - remove coverage data, Jest cache and transpiled files,
@@ -58,7 +41,7 @@ unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
 - `validate` - run tests,
 - `validate:watch` - interactive watch mode to automatically re-run tests
 
-## Additional Informations
+## Additional Information
 
 ## License
 

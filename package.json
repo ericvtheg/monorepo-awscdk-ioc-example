@@ -5,6 +5,8 @@
   "engines": {
     "node": ">= 16.13 <17"
   },
+  "private": true,
+  "workspaces": ["src/services/*", "src/libs", "src/infra"],
   "devDependencies": {
     "@types/jest": "~27.0.2",
     "@types/node": "~16.11.6",
@@ -31,7 +33,7 @@
     "validate": "jest --coverage",
     "validate:watch": "jest --watch"
   },
-  "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
+  "author": "Eric Ventor",
   "license": "Apache-2.0",
   "dependencies": {
     "inversify": "^6.0.1",

@@ -6,3 +6,7 @@
 
 // Backend Needs
 // per user store likes
+
+
+// https://github.com/andrea-lascola/serverless-inversify-example
+// https://ewanvalentine.io/how-im-writing-lambda-services-these-days/

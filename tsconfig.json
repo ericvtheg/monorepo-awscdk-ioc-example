@@ -22,6 +22,9 @@
   },
   "include": [
     "src/**/*",
-    "tests/**/*"
+    "tests/**/*",
+    "src/libs/**/*",
+    "services/**/*",
+    "node_modules/tests",
   ]
 }

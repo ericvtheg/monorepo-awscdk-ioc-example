@@ -1,0 +1,10 @@
+{
+  "name": "libs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eric Ventor",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1043.0"
+  }
+}
