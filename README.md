@@ -5,6 +5,8 @@
 [![APLv2][license-badge]][license]
 [![Build Status - GitHub Actions][gha-badge]][gha-ci]
 
+This repo implements a mono-repo approach described [here](https://www.serverless.com/blog/structuring-a-real-world-serverless-app).
+
 👩🏻‍💻 Developer Ready: A comprehensive template. Works out of the box for most [Node.js][nodejs] projects.
 
 🏃🏽 Instant Value: All basic tools included and configured:
