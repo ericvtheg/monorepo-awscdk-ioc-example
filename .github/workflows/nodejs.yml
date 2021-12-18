@@ -9,10 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: volta-cli/action@v1
     - run: yarn ci --no-audit
-    - run: yarn run lint --if-present
+    - run: yarn run lint
     - run: yarn run validate
-    - run: yarn run build --if-present
+    - run: yarn run build
       env:
         CI: true
