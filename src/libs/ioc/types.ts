@@ -1,5 +1,6 @@
 const TYPES = {
-  Example: Symbol.for("Example"),
+  DemoRepository: Symbol.for("DemoRepository"),
+  DemoEntity: Symbol.for("DemoEntity"),
 };
 
 export { TYPES };
