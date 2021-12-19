@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: yarn ci --no-audit
+    - run: yarn
     - run: yarn run lint
     - run: yarn run validate
     - run: yarn run build
