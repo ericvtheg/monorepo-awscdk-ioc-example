@@ -5,13 +5,12 @@ export interface IDemoRepository {
 }
 
 /**
- * @description
+ * @description Remember that unit tests only test your code, not infrastructure
+ * so the repository abstraction make it easier to achieve that goal
  */
 
 @injectable()
 export class DemoRepository implements IDemoRepository {
-    // constructor() {}
-
     public get<T>(type: new () => T): T {
         // get data from repository
         return new type();

@@ -3,7 +3,7 @@ import { TYPES } from "../ioc/types";
 import { IDemoRepository } from "../repositories/demo-repository";
 
 export interface IDemoEntity {
-  get<T>(type: new () => T): T;
+  getEntity<T>(type: new () => T): T;
 }
 
 /**
@@ -14,9 +14,9 @@ export interface IDemoEntity {
 export class DemoEntity implements IDemoEntity {
     constructor(@inject(TYPES.DemoRepository) private repo: IDemoRepository) {}
 
-    public get<T>(type: new () => T): T {
+    public getEntity<T>(type: new () => T): T {
 
-        // get data from repository
+        // get data using repository
         return this.repo.get(type);
     }
 }
