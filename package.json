@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "engines": {
-    "node": ">= 16.13 <17"
+    "node": ">= 14 <15"
   },
   "private": true,
   "workspaces": ["src/services/*", "src/libs", "src/infra"],
@@ -26,7 +26,7 @@
     "start": "yarn build && yarn main",
     "main": "node build/src/main.js",
     "clean": "rimraf coverage build tmp",
-    "prebuild": "npm run lint",
+    "prebuild": "yarn run lint",
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "eslint . --ext .ts,.tsx",
@@ -36,8 +36,6 @@
   "author": "Eric Ventor",
   "license": "Apache-2.0",
   "dependencies": {
-    "inversify": "^6.0.1",
-    "reflect-metadata": "^0.1.13",
     "tslib": "~2.3.1"
   }
 }

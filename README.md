@@ -1,4 +1,4 @@
-# node-typescript-boilerplate
+# monorepo-awscdk-ioc-example
 
 [![TypeScript version][ts-badge]][typescript-4-4]
 [![Node.js version][nodejs-badge]][nodejs]

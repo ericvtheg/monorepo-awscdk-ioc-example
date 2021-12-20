@@ -4,5 +4,6 @@
   "main": "index.js",
   "author": "Eric Ventor",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {}
 }

@@ -1,0 +1,11 @@
+{
+  "name": "libs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eric Ventor",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.88"
+  }
+}
