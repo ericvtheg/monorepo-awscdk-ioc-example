@@ -9,5 +9,7 @@
     "inversify": "^6.0.1",
     "reflect-metadata": "^0.1.13"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.88"
+  }
 }
