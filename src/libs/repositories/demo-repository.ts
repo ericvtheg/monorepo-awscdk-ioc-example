@@ -1,18 +1,19 @@
-import { injectable, inject } from "inversify";
+import { injectable } from "inversify";
 
 export interface IDemoRepository {
-  get<T>(type: new () => T): T;
+  get<T>(arg1: any): T;
 }
 
+// TODO: improve doc block comment here
+
 /**
- * @description Remember that unit tests only test your code, not infrastructure
+ * @description Unit tests only test your code, not infrastructure
  * so the repository abstraction make it easier to achieve that goal
  */
-
 @injectable()
 export class DemoRepository implements IDemoRepository {
-    public get<T>(type: new () => T): T {
+    public get<T>(arg1: any): T {
         // get data from repository
-        return new type();
+        return arg1;
     }
 }
