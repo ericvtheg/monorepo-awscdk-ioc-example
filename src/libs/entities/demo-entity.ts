@@ -6,8 +6,12 @@ export interface IDemoEntity {
   getEntity<T>(type: new () => T): T;
 }
 
+// add interface for expected payload, use this to pass down to repository
+
 /**
- * @description
+ * @description a domain entity.
+ * Example: the DemoRepository is used to interact with s3 buckets.
+ * This demo entity is associated with documents that are stored in a specific s3 bucket.
  */
 
 @injectable()

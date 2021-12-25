@@ -1,4 +1,4 @@
-import { APIGatewayProxyHandler, APIGatewayProxyEvent, APIGatewayProxyResult, Context } from "aws-lambda";
+import { APIGatewayProxyEvent, APIGatewayProxyResult, Context } from "aws-lambda";
 
 export interface APIGatewayLambdaHandler {
   execute(event: APIGatewayProxyEvent, context?: Context): Promise<APIGatewayProxyResult>;
