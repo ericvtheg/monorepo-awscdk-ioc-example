@@ -1,4 +1,5 @@
 import { injectable } from "inversify";
+import { TYPES } from "../ioc/types";
 
 export interface IDemoRepository {
   get<T>(arg1: any): T;
@@ -12,8 +13,10 @@ export interface IDemoRepository {
  */
 @injectable()
 export class DemoRepository implements IDemoRepository {
-    public get<T>(arg1: any): T {
-        // get data from repository
+
+    public get<T>(id: string, resourceName: string): T {
+        // get data using repository
+        const payload =
         return arg1;
     }
 }

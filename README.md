@@ -10,6 +10,7 @@ This repo implements a mono-repo approach described [here](https://www.serverles
 ## TODO
 
 * add tests
+* create a type for `id`s
 * update README
 * context binding handler.execute to lambda call
 * figure out how to run services locally in a container

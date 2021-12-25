@@ -3,10 +3,13 @@ import { TYPES } from "../ioc/types";
 import { IDemoRepository } from "../repositories/demo-repository";
 
 export interface IDemoEntity {
-  getEntity<T>(type: new () => T): T;
+  get(arg1: string): payload;
 }
 
-// add interface for expected payload, use this to pass down to repository
+interface payload {
+  id: string;
+  body: string;
+}
 
 /**
  * @description a domain entity.
@@ -16,11 +19,12 @@ export interface IDemoEntity {
 
 @injectable()
 export class DemoEntity implements IDemoEntity {
+    private readonly resourceName = "someResource";
     constructor(@inject(TYPES.DemoRepository) private repo: IDemoRepository) {}
 
-    public getEntity<T>(type: new () => T): T {
+    public get(id: string): payload {
 
         // get data using repository
-        return this.repo.get(type);
+        return this.repo.get<payload>(id, this.resourceName);
     }
 }
