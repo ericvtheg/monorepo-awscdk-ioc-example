@@ -15,7 +15,8 @@ describe("DemoEntity", () => {
   const demoEntity: DemoEntity = new DemoEntity(mockRepo);
   beforeEach(() => {
     // Clear all instances and calls to constructor and all methods:
-    mockRepo.mockClear();
+    // TODO: figure out how to call mockClear
+    // mockRepo.mockClear();
   });
 
   describe("get", () => {

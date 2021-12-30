@@ -19,6 +19,7 @@ This repo implements a mono-repo approach described [here](https://www.serverles
 * add more aws cdk examples
 * more doc blocks
 * figure out what to do with weird types in repository/entity
+* do TODOs
 
 👩🏻‍💻 Developer Ready: A comprehensive template. Works out of the box for most [Node.js][nodejs] projects.
 
