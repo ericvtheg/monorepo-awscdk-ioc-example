@@ -15,9 +15,12 @@ module.exports = {
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
     'src/**/*.{ts,tsx,js,jsx}',
+    '!src/infra/**',
+    '!src/libs/interfaces/**',
+    '!src/libs/ioc/**',
     '!src/**/*.d.ts',
   ],
   setupFiles: [
-    "<rootDir>/tests/jest_config_setup.ts"
+    "<rootDir>/jest_config_setup.ts"
   ]
 };
