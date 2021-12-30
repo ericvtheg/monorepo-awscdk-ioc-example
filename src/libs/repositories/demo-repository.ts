@@ -1,11 +1,14 @@
-import { injectable } from "inversify";
+import { injectable, inject } from "inversify";
 import { TYPES } from "../ioc/types";
+import { S3 } from "aws-sdk";
 
 export interface IDemoRepository {
-  get<T>(arg1: any): T;
+  get(key: string, resourceName: string): Promise<S3.Body | undefined>
 }
 
 // TODO: improve doc block comment here
+
+// get data using wrapped service
 
 /**
  * @description Unit tests only test your code, not infrastructure
@@ -13,10 +16,24 @@ export interface IDemoRepository {
  */
 @injectable()
 export class DemoRepository implements IDemoRepository {
+  constructor(@inject(TYPES.S3) private s3: S3) {}
 
-    public get<T>(id: string, resourceName: string): T {
-        // get data using repository
-        const payload =
-        return arg1;
+    public async get(key: string, resourceName: string): Promise<S3.Body | undefined> {
+        const params: S3.GetObjectRequest = {
+          Bucket: resourceName,
+          Key: key,
+        };
+
+        const response = await this.s3.getObject(params).promise();
+
+        return response.Body;
     }
+
+    // put
+
+    // delete
+
+    // getMetadata
+
+    // etc
 }
