@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { Container } from "inversify";
 import { TYPES } from "./types";
 import { IDemoRepository, DemoRepository } from "../repositories/demo-repository";

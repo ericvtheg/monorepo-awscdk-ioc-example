@@ -3,20 +3,28 @@ import { TYPES } from "../ioc/types";
 import { IDemoRepository } from "../repositories/demo-repository";
 
 export interface IDemoEntity {
-  getEntity<T>(type: new () => T): T;
+  get(arg1: string): payload;
+}
+
+interface payload {
+  id: string;
+  body: string;
 }
 
 /**
- * @description
+ * @description a domain entity.
+ * Example: the DemoRepository is used to interact with s3 buckets.
+ * This demo entity is associated with documents that are stored in a specific s3 bucket.
  */
 
 @injectable()
 export class DemoEntity implements IDemoEntity {
+    private readonly resourceName = "someResource";
     constructor(@inject(TYPES.DemoRepository) private repo: IDemoRepository) {}
 
-    public getEntity<T>(type: new () => T): T {
+    public get(id: string): payload {
 
         // get data using repository
-        return this.repo.get(type);
+        return this.repo.get<payload>(id, this.resourceName);
     }
 }

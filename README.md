@@ -1,25 +1,36 @@
-# monorepo-awscdk-ioc-example
+# monorepo-awscdk-ioc-example (WORK IN PROGRESS)
 
 [![TypeScript version][ts-badge]][typescript-4-4]
 [![Node.js version][nodejs-badge]][nodejs]
 [![APLv2][license-badge]][license]
-[![Build Status - GitHub Actions][gha-badge]][gha-ci]
+[![Build Status * GitHub Actions][gha-badge]][gha-ci]
 
 This repo implements a mono-repo approach described [here](https://www.serverless.com/blog/structuring-a-real-world-serverless-app).
+
+## TODO
+
+* add tests
+* create a type for `id`s
+* update README
+* context binding handler.execute to lambda call
+* figure out how to run services locally in a container
+* add more aws cdk examples
+* more doc blocks
+* figure out what to do with weird types in repository/entity
 
 👩🏻‍💻 Developer Ready: A comprehensive template. Works out of the box for most [Node.js][nodejs] projects.
 
 🏃🏽 Instant Value: All basic tools included and configured:
 
-- [TypeScript][typescript] [4.4][typescript-4-4]
-- [ESLint][eslint] with some initial rules recommendation
-- [Jest][jest] for fast unit testing and code coverage
-- Type definitions for Node.js and Jest
-- [Prettier][prettier] to enforce consistent code style
-- NPM [scripts](#available-scripts) for common operations
-- Simple example of TypeScript code and unit test
-- .editorconfig for consistent file format
-- Example configuration for [GitHub Actions][gh-actions]
+* [TypeScript][typescript] [4.4][typescript-4-4]
+* [ESLint][eslint] with some initial rules recommendation
+* [Jest][jest] for fast unit testing and code coverage
+* Type definitions for Node.js and Jest
+* [Prettier][prettier] to enforce consistent code style
+* NPM [scripts](#available-scripts) for common operations
+* Simple example of TypeScript code and unit test
+* .editorconfig for consistent file format
+* Example configuration for [GitHub Actions][gh-actions]
 
 🤲 Free as in speech: available under the APLv2 license.
 
@@ -33,13 +44,13 @@ To start, just click the **[Use template][repo-template-action]** link (or the g
 
 ## Available Scripts
 
-- `clean` - remove coverage data, Jest cache and transpiled files,
-- `prebuild` - lint source files and tests before building,
-- `build` - transpile TypeScript to ES6,
-- `build:watch` - interactive watch mode to automatically transpile source files,
-- `lint` - lint source files and tests,
-- `validate` - run tests,
-- `validate:watch` - interactive watch mode to automatically re-run tests
+* `clean` - remove coverage data, Jest cache and transpiled files,
+* `prebuild` - lint source files and tests before building,
+* `build` - transpile TypeScript to ES6,
+* `build:watch` - interactive watch mode to automatically transpile source files,
+* `lint` - lint source files and tests,
+* `validate` - run tests,
+* `validate:watch` - interactive watch mode to automatically re-run tests
 
 ## Additional Information
 

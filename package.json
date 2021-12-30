@@ -30,7 +30,7 @@
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "eslint . --ext .ts,.tsx",
-    "validate": "jest --coverage",
+    "validate": "yarn lint && jest --coverage",
     "validate:watch": "jest --watch"
   },
   "author": "Eric Ventor",
