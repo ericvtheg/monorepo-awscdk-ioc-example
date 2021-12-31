@@ -6,6 +6,7 @@ export interface IDemoRepository {
   get(key: string, resourceName: string): Promise<S3.Body | undefined>
 }
 
+
 // TODO: improve doc block comment here
 
 // get data using wrapped service
@@ -25,7 +26,7 @@ export class DemoRepository implements IDemoRepository {
         };
 
         const response = await this.s3.getObject(params).promise();
-
+        // TODO: handle null case
         return response.Body;
     }
 

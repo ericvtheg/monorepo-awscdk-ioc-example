@@ -1,30 +1,28 @@
 import { injectable, inject } from "inversify";
 import { TYPES } from "../ioc/types";
 import { IDemoRepository } from "../repositories/demo-repository";
+import { S3 } from "aws-sdk";
 
+// TODO: improve return types & try not to import S3 here
 export interface IDemoEntity {
-  get(arg1: string): payload;
-}
-
-interface payload {
-  id: string;
-  body: string;
+  get(arg1: string): Promise<S3.Body | undefined>;
 }
 
 /**
  * @description a domain entity.
  * Example: the DemoRepository is used to interact with s3 buckets.
- * This demo entity is associated with documents that are stored in a specific s3 bucket.
+ * This demo entity could be associated with documents that are stored in a specific s3 bucket.
  */
 
 @injectable()
 export class DemoEntity implements IDemoEntity {
     private readonly resourceName = "someResource";
-    constructor(@inject(TYPES.DemoRepository) private repo: IDemoRepository) {}
+    constructor(@inject(TYPES.DemoRepository) private demoRepo: IDemoRepository) {}
 
-    public get(id: string): payload {
-
+    public async get(id: string): Promise<S3.Body | undefined> {
         // get data using repository
-        return this.repo.get<payload>(id, this.resourceName);
+        const body = await this.demoRepo.get(id, this.resourceName);
+        // business logic
+        return body;
     }
 }

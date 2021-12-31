@@ -2,6 +2,7 @@ import { DemoRepository, IDemoRepository } from "./demo-repository";
 
 
 // TODO: anyway I can type this to not be any?
+// var name must start with "mock"
 const mockS3 = { getObject: jest.fn() } as any;
 
 jest.mock('aws-sdk', () => {
@@ -10,6 +11,8 @@ jest.mock('aws-sdk', () => {
 
 describe("DemoRepository", () => {
   const demoRepository: IDemoRepository = new DemoRepository(mockS3);
+
+  // TODO: figure out how to call mockClear
 
   describe("get()", () => {
     it("should successfully call", async () => {{
