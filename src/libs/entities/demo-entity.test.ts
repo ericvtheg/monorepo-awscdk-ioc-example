@@ -1,9 +1,9 @@
 import { DemoEntity } from "./demo-entity";
-import { DemoRepository } from "../repositories/demo-repository";
+import { IDemoRepository } from "../repositories/demo-repository";
 import { mocked } from 'ts-jest/utils';
 
 // var name must start with "mock"
-const mockRepo = { get: jest.fn() } as unknown as DemoRepository;
+const mockRepo = { get: jest.fn() } as unknown as IDemoRepository;
 
 jest.mock('../repositories/demo-repository', () => {
   return jest.fn().mockImplementation(() => {
