@@ -6,7 +6,7 @@
     "node": ">= 14 <15"
   },
   "private": true,
-  "workspaces": ["src/services/*", "src/libs", "src/infra"],
+  "workspaces": ["src/services/*", "src/libs", "src/infra", "src/services"],
   "devDependencies": {
     "@types/jest": "~27.0.2",
     "@types/node": "~16.11.6",
