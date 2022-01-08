@@ -9,3 +9,5 @@ export interface APIGatewayLambdaHandler {
 // cron handler
 
 // sns handler
+
+// etc
