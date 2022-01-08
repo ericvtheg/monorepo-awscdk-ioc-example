@@ -9,23 +9,27 @@ This repo implements a mono-repo approach described [here](https://www.serverles
 
 ## TODO
 
-* add tests
-* create a type for `id`s
-* update README
-* add error handling
-* decide on class vs function based lambda handlers
+### High Priority
+
 * context binding handler.execute to lambda call
+* set up aws cdk to create lambdas
+* add error handling
+* figure out what to do with weird types in repository/entity
+* more doc blocks
+* look into generating events for lambdas
+* add validation library
+* update README
+
+## Lower Priority
+
+* add integration tests
+* review inversify documentation more (specifically singleton binds etc)
+* improve interfaces
+* create a type for `id`s
 * figure out how to run services locally in a container
 * add more aws cdk examples
-* more doc blocks
-* figure out what to do with weird types in repository/entity
 * do TODOs
-* fix github pipeline failing
-* add validation library
 * refactor all aws interfaces to be from one place
-* look into generating events for lambdas
-* improve interfaces
-* review inversify documentation more (specifically singleton binds etc)
 
 👩🏻‍💻 Developer Ready: A comprehensive template. Works out of the box for most [Node.js][nodejs] projects.
 
@@ -36,7 +40,7 @@ This repo implements a mono-repo approach described [here](https://www.serverles
 * [Jest][jest] for fast unit testing and code coverage
 * Type definitions for Node.js and Jest
 * [Prettier][prettier] to enforce consistent code style
-* NPM [scripts](#available-scripts) for common operations
+* yarn [scripts](#available-scripts) for common operations
 * Simple example of TypeScript code and unit test
 * .editorconfig for consistent file format
 * Example configuration for [GitHub Actions][gh-actions]
@@ -68,10 +72,10 @@ To start, just click the **[Use template][repo-template-action]** link (or the g
 Licensed under the APLv2. See the [LICENSE](https://github.com/jsynowiec/node-typescript-boilerplate/blob/main/LICENSE) file for details.
 
 [ts-badge]: https://img.shields.io/badge/TypeScript-4.4-blue.svg
-[nodejs-badge]: https://img.shields.io/badge/Node.js->=%2016.13-blue.svg
+[nodejs-badge]: https://img.shields.io/badge/Node.js->=%2014-blue.svg
 [nodejs]: https://nodejs.org/dist/latest-v14.x/docs/api/
-[gha-badge]: https://github.com/jsynowiec/node-typescript-boilerplate/actions/workflows/nodejs.yml/badge.svg
-[gha-ci]: https://github.com/jsynowiec/node-typescript-boilerplate/actions/workflows/nodejs.yml
+[gha-badge]: https://github.com/ericvtheg/monorepo-awscdk-ioc-example/actions/workflows/nodejs.yml/badge.svg
+[gha-ci]: https://github.com/ericvtheg/monorepo-awscdk-ioc-example/actions/workflows/nodejs.yml
 [typescript]: https://www.typescriptlang.org/
 [typescript-4-4]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-4.html
 [license-badge]: https://img.shields.io/badge/license-APLv2-blue.svg
@@ -81,4 +85,4 @@ Licensed under the APLv2. See the [LICENSE](https://github.com/jsynowiec/node-ty
 [wiki-js-tests]: https://github.com/jsynowiec/node-typescript-boilerplate/wiki/Unit-tests-in-plain-JavaScript
 [prettier]: https://prettier.io
 [gh-actions]: https://github.com/features/actions
-[repo-template-action]: https://github.com/jsynowiec/node-typescript-boilerplate/generate
+[repo-template-action]: https://github.com/ericvtheg/monorepo-awscdk-ioc-example/generate
