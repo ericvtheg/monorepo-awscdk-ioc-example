@@ -24,6 +24,8 @@
     "src/**/*",
     "tests/**/*",
     "src/libs/**/*",
-    "services/**/*",
+  ],
+  "exclude": [
+    "cdk.out",
   ]
 }

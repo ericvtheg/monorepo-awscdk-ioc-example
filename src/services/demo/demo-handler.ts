@@ -13,7 +13,7 @@ export class DemoHandler implements APIGatewayLambdaHandler {
 
   public async execute(event: APIGatewayProxyEvent): Promise<APIGatewayProxyStructuredResultV2>  {
       const entityId = event.pathParameters?.id;
-      if(!entityId){
+      if (!entityId){
         return { statusCode: StatusCodes.BAD_REQUEST }
       }
 

@@ -18,11 +18,16 @@ This repo implements a mono-repo approach described [here](https://www.serverles
 * more doc blocks
 * look into generating events for lambdas
 * add validation library
-* update README
+* update README (include aws cdk pre req global instal)
+* update README to include solution for Error: This stack uses assets, so the toolkit stack must be deployed to the environment (Run "cdk bootstrap aws://unknown-account/unknown-region")
+* update README to include that docker running is required
 
 ## Lower Priority
 
 * add integration tests
+* look into only including services/'service' dir path in cdk lambda
+* cloudwatch visibility things
+* get stricter linter
 * review inversify documentation more (specifically singleton binds etc)
 * improve interfaces
 * create a type for `id`s

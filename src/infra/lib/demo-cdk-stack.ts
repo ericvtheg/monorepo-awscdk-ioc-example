@@ -1,17 +1,17 @@
 import { Stack, StackProps, Construct } from '@aws-cdk/core';
+import { NodejsFunction } from "@aws-cdk/aws-lambda-nodejs";
+import * as lambda from '@aws-cdk/aws-lambda';
 
 export class TestCdkStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
-
-    // example sqs resource
-    // const queue = new sqs.Queue(this, 'TestCdkQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
-
-    // example lambda
-
+    new NodejsFunction(this, 'demoLambdaHandler', {
+      runtime: lambda.Runtime.NODEJS_14_X,
+      // timeout: Duration.seconds(15),
+      memorySize: 128,
+      entry: './src/index.ts',
+      handler: 'index.executeDemoHandler',
+    });
   }
 }

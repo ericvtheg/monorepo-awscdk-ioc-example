@@ -23,13 +23,15 @@
     "typescript": "~4.4.4"
   },
   "scripts": {
-    "start": "yarn build && yarn main",
-    "main": "node build/src/main.js",
-    "clean": "rimraf coverage build tmp",
-    "prebuild": "yarn run lint",
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
+    "cdk": "cdk deploy --all",
+    "clean": "rimraf coverage build tmp",
+    "deploy": "yarn validate && yarn cdk",
+    "start": "yarn build && yarn main",
     "lint": "eslint . --ext .ts,.tsx",
+    "main": "node build/src/main.js",
+    "prebuild": "yarn run lint",
     "validate": "yarn lint && jest --coverage",
     "validate:watch": "jest --watch"
   },
