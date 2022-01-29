@@ -11,7 +11,7 @@ export class TestCdkStack extends Stack {
       // timeout: Duration.seconds(15),
       memorySize: 128,
       entry: './src/index.ts',
-      handler: 'index.executeDemoHandler',
+      handler: 'executeDemoHandler',
     });
   }
 }

@@ -1,6 +1,7 @@
 import { injectable, inject } from "inversify";
 import { TYPES } from "../ioc/types";
 import { S3 } from "aws-sdk";
+import "reflect-metadata";
 
 export interface IDemoRepository {
   get(key: string, resourceName: string): Promise<S3.Body | undefined>
@@ -19,22 +20,23 @@ export interface IDemoRepository {
 export class DemoRepository implements IDemoRepository {
   constructor(@inject(TYPES.S3) private s3: S3) {}
 
-    public async get(key: string, resourceName: string): Promise<S3.Body | undefined> {
-        const params: S3.GetObjectRequest = {
-          Bucket: resourceName,
-          Key: key,
-        };
+  public async get(key: string, resourceName: string): Promise<S3.Body | undefined> {
+    console.log("hit3");
+    const params: S3.GetObjectRequest = {
+      Bucket: resourceName,
+      Key: key,
+    };
 
-        const response = await this.s3.getObject(params).promise();
-        // TODO: handle null case
-        return response.Body;
-    }
+    const response = await this.s3.getObject(params).promise();
+    // TODO: handle null case
+    return response.Body;
+  }
 
-    // put
+  // put
 
-    // delete
+  // delete
 
-    // getMetadata
+  // getMetadata
 
-    // etc
+  // etc
 }
